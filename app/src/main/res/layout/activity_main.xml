@@ -37,7 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/messageInput" />
 
-    <android.support.v7.widget.RecyclerView
+    <ListView
         android:id="@+id/messageView"
         android:layout_width="350dp"
         android:layout_height="487dp"
@@ -47,7 +47,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="#56565"
+        android:background="#565656"
         app:layout_constraintBottom_toTopOf="@+id/messageInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
