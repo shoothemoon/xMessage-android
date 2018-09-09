@@ -4,53 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#505050"
+    android:background="@android:color/holo_blue_bright"
     android:visibility="visible"
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/messageInput"
-        android:layout_width="350dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:id="@+id/register_Username"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="172dp"
+        android:background="@android:color/background_light"
         android:ems="10"
-        android:hint="Type a message..."
+        android:hint="Username"
         android:inputType="textPersonName"
-        android:padding="5dp"
-        android:singleLine="false"
-        android:textColor="@android:color/white"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/sendButton"
-        android:layout_width="64dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Send"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/messageInput" />
-
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="350dp"
-        android:layout_height="487dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="#565656"
-        app:layout_constraintBottom_toTopOf="@+id/messageInput"
+        android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/register_Password"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_Email" />
+
+    <EditText
+        android:id="@+id/register_Email"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_Username" />
+
+    <Button
+        android:id="@+id/button_Register"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="REGISTER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_Password" />
+
+    <TextView
+        android:id="@+id/alrdy_hve_acct"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Already have an account? Login!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Register" />
 </android.support.constraint.ConstraintLayout>
