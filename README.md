@@ -4,6 +4,9 @@ Plans:
 
 
 Create functional chat app using firebase.
+
 Distribute app.
+
 Convert from firebase to somthing else.
+
 Re-Distribute.
