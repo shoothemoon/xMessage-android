@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "817316658734",
+    "firebase_url": "https://xmessage-5ee85.firebaseio.com",
+    "project_id": "xmessage-5ee85",
+    "storage_bucket": "xmessage-5ee85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817316658734:android:9f3cdf2c4479bcbc",
+        "android_client_info": {
+          "package_name": "shoothemoon.github.com.xmessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817316658734-bb782c2tnadsircji0net7e5m0tgav33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTfDTHNa3KMoE8VkV_BIoqfJxgFrLxLtQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
