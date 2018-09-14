@@ -1,12 +1,10 @@
 package shoothemoon.github.com.xmessage
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
-import shoothemoon.github.com.xmessage_test.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,30 +12,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val email = register_Email.text.toString()
-        val password = register_Password.text.toString()
-
         button_Register.setOnClickListener {
-            println("Email: $email, Password: $password")
+            val email = register_Email.text.toString()
+            val password = register_Email.text.toString()
 
-            //firebase auth
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener{
-                        if (!it.isSuccessful) return@addOnCompleteListener
-
-                        //if success
-
-                        Log.d("Main", "Successfully created! uid: ${it.result.user.uid}")
-
-                    }
+            Log.d("MainActivity", "Email is working $email")
+            Log.d("MainActivity", "password is working $password")
         }
 
         alrdy_hve_acct.setOnClickListener {
-            Log.d("MainActivity", "Clicked to show login activity")
+            Log.d("MainActivity", "Attempting to show loginView")
 
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-
     }
+
 }
