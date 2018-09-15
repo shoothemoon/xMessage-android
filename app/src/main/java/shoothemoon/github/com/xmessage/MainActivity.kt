@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
             val email = register_Email.text.toString()
             val password = register_Email.text.toString()
 
+            if (email.isEmpty() || password.isEmpty()) return@setOnClickListener
+
             Log.d("MainActivity", "Email is working $email")
             Log.d("MainActivity", "password is working $password")
 
@@ -30,11 +32,7 @@ class MainActivity : AppCompatActivity() {
                             Log.d("MainActivity", "Created user with uid: ${it.result.user.uid}")
                             register_Email.text.clear()
                             register_Password.text.clear()
-                            register_Username.text.clear()
 
-
-
-                            startActivity(intent)
 
                         }
                     }
