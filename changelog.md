@@ -11,3 +11,9 @@ Log:
 9/13/18: Gonna start rewriting the app. Urgh.
 
 9:13:18: Ok. Almost done rewriting app. Just ran into a git issue. Also. I'm building this app off of Youtube user: LetsBuildThatApp's kotlin firebase tutorial. Credit where credit is due. it won't be like his forever though. I just need a cornerstone.
+
+9/16/18: Rewrote app fully. Authentication works! Goddamn github is screwing me over that's why I can't push. Ill fix later.
+
+9/17/18: Expect much more progress over weekend. Will figure out how to push my shit ton of changes. 
+
+9/18/18: Profile pciture wont upload properly. Must fix. 
