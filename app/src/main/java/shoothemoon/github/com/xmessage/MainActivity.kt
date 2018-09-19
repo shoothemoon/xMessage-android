@@ -1,11 +1,17 @@
 package shoothemoon.github.com.xmessage
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                             register_Email.text.clear()
                             register_Password.text.clear()
 
-
+                            upLoadImageToStorage()
                         }
                     }
         }
@@ -45,6 +51,42 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        upload_pfp.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type = "image/*"
+            startActivityForResult(intent, 0)
+        }
+
     }
 
+    var uploadedPfpUri: Uri? = null
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 0 && resultCode == Activity.RESULT_OK && data != null) {
+            //check what image is
+
+            uploadedPfpUri = data.data
+
+            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, uploadedPfpUri)
+
+            val bitmapDrawable = BitmapDrawable()
+            upload_pfp.setBackgroundDrawable(bitmapDrawable)
+        }
+
+    }
+
+    private fun upLoadImageToStorage() {
+        if (uploadedPfpUri == null) return
+
+        val filename = UUID.randomUUID().toString()
+        val ref = FirebaseStorage.getInstance().getReference("/profiles/$filename")
+
+        ref.putFile(uploadedPfpUri!!)
+                .addOnSuccessListener {
+                    Log.d("MainActivity", "Success pfp")
+                }
+    }
 }
+
