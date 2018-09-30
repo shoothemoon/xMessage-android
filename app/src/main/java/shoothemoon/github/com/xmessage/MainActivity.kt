@@ -9,6 +9,7 @@ import android.provider.MediaStore
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -86,7 +87,29 @@ class MainActivity : AppCompatActivity() {
         ref.putFile(uploadedPfpUri!!)
                 .addOnSuccessListener {
                     Log.d("MainActivity", "Success pfp")
+
+                    ref.downloadUrl.addOnSuccessListener {
+                        it.toString()
+
+                        saveUserToDB(it.toString())
+                    }
                 }
     }
+
+    private fun saveUserToDB(profileImageUrl: String) {
+
+        val uid = FirebaseAuth.getInstance().uid ?: ""
+        val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
+
+        val user = User(uid, register_Username.text.toString(), profileImageUrl)
+
+        ref.setValue(user)
+                .addOnSuccessListener {
+                    Log.d("MainActivity", "Saved user to Database")
+                }
+    }
+
 }
+
+class User(val uid: String, val username: String, val profileImageUri: String)
 
