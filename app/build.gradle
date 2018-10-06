@@ -5,11 +5,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 28.0.
     defaultConfig {
         applicationId "shoothemoon.github.com.xmessage"
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdkVersion 28.0.
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

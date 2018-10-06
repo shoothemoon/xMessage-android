@@ -26,3 +26,8 @@
 
 9/28/18: Everything is awesome, everything is cool when your part of a team.
 Everything is awesome, when you're living out a dream
+
+10/4/18: Progress is still slow.
+
+10/5/18: Gonna take a small break from this project to focus on my java personal assistant project.
+
