@@ -11,3 +11,5 @@ Log:
 9/13/18: Gonna start rewriting the app. Urgh.
 
 9:13:18: Ok. Almost done rewriting app. Just ran into a git issue. Also. I'm building this app off of Youtube user: LetsBuildThatApp's kotlin firebase tutorial. Credit where credit is due. it won't be like his forever though. I just need a cornerstone.
+
+11/22/18: I just did a massive revert.
